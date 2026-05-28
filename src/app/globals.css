@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-white/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 text-ink-100 antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-brand-500/30 text-white;
+  }
+
+  /* Thin, theme-aware scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-white/10;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/20;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-br from-white via-white to-brand-200 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-brand-300 via-brand-400 to-accent-400 bg-clip-text text-transparent;
+  }
+
+  /* Frosted surface used for cards, navbar and popovers */
+  .glass {
+    @apply border border-white/10 bg-white/[0.03] backdrop-blur-xl;
+  }
+
+  .card {
+    @apply rounded-3xl border border-white/10 bg-white/[0.025] shadow-card;
+  }
+
+  /* Animated gradient border wrapper */
+  .ring-gradient {
+    @apply relative;
+  }
+  .ring-gradient::before {
+    content: "";
+    @apply pointer-events-none absolute inset-0 rounded-[inherit] p-px;
+    background: linear-gradient(
+      130deg,
+      rgba(129, 140, 248, 0.6),
+      rgba(34, 211, 238, 0.25),
+      transparent 60%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+}
+
+@layer utilities {
+  /* Soft radial spotlight used behind hero content */
+  .bg-spotlight {
+    background:
+      radial-gradient(60% 50% at 50% 0%, rgba(99, 102, 241, 0.22), transparent 70%),
+      radial-gradient(40% 40% at 80% 20%, rgba(34, 211, 238, 0.12), transparent 70%);
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
+    mask-image: linear-gradient(to bottom, #000 60%, transparent);
+  }
+
+  .reduce-motion-safe {
+    @media (prefers-reduced-motion: reduce) {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
