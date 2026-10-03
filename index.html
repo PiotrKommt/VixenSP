@@ -6,7 +6,7 @@
 
 <!--
   ╔══════════════════════════════════════════════════════════════════╗
-  ║  EDIT ME — all customisable content lives in this one block.     ║
+  ║  EDIT ME: all the text and links you can change are in here.     ║
   ║  1. Accent colour  → change --accent in the <style> right below. ║
   ║  2. Everything else → the CONFIG object in the <script> below.   ║
   ╚══════════════════════════════════════════════════════════════════╝
@@ -30,47 +30,42 @@
 
     marquee: ["Combat Systems", "UI Tweening & Scripting", "Custom Game Systems"],
 
-    // link:   where "Watch Project" goes (put your YouTube URL here)
-    // thumb:  16:9 image (optional — leave "" for the styled placeholder)
-    // video:  short muted clip that plays on hover (optional)
+    // link:   where "Watch Project" goes (put your YouTube link here)
+    // thumb:  16:9 picture (optional, leave "" to show the placeholder box)
+    // video:  short clip that plays when you hover the card (optional)
     projects: [
-      { title: "Combat System",   desc: "Hitboxes, combos, blocking and knockback that feel snappy on every ping.",
+      { title: "Combat System", desc: "Hitboxes, combos, blocking and knockback that feel good to play.",
         link: "assets/combat-system.mp4", thumb: "assets/combat-system.jpg", video: "assets/combat-system.mp4" },
-      { title: "Movement System", desc: "Sprinting, sliding and dashing with smooth, server-validated physics.",
-        link: "https://www.youtube.com/", thumb: "", video: "" },
-      { title: "Water System",    desc: "Swimming, buoyancy and splash effects for believable water.",
-        link: "https://www.youtube.com/", thumb: "", video: "" },
-      { title: "Keyboard System", desc: "A fully rebindable input layer with on-screen key prompts.",
-        link: "https://www.youtube.com/", thumb: "", video: "" },
-      { title: "Stack It System", desc: "Physics-based stacking gameplay with scoring and round logic.",
-        link: "https://www.youtube.com/", thumb: "", video: "" }
+      { title: "Placeholder", desc: "New project coming soon.", link: "#", thumb: "", video: "" },
+      { title: "Placeholder", desc: "New project coming soon.", link: "#", thumb: "", video: "" },
+      { title: "Placeholder", desc: "New project coming soon.", link: "#", thumb: "", video: "" },
+      { title: "Placeholder", desc: "New project coming soon.", link: "#", thumb: "", video: "" }
     ],
 
     services: [
-      { title: "Gameplay Systems", desc: "Combat, movement, inventories, rounds — the core loops that make a game fun to play." },
-      { title: "UI Scripting",     desc: "Menus, HUDs and shops with clean tweening that feel as good as they look." },
-      { title: "Project Support",  desc: "Bug fixing, optimisation and refactors for games that are already in progress." }
+      { title: "Gameplay Systems", desc: "Combat, movement, rounds and more. The main stuff that makes a game fun." },
+      { title: "UI Scripting",     desc: "Menus, HUDs and shops with smooth tweens that look and feel clean." },
+      { title: "Project Support",  desc: "I fix bugs, make things run faster and clean up code in games you already work on." }
     ],
 
     about: [
-      "I'm a freelance Roblox scripter who turns rough ideas into systems that actually ship. I care about the parts players feel — responsiveness, polish, and code that doesn't fall apart under load.",
-      "I work in Luau with a modern toolchain, write readable code you can maintain after I'm gone, and keep you updated from first prototype to final details."
+      "Hey, I'm 16 and I've been scripting on Roblox for 3 years. I care about the parts players actually feel: smooth controls, polish and code that's easy to maintain. You'll get regular updates from first prototype to final result."
     ],
     stats: [
-      { value: "5 Years",         label: "Scripting" },
+      { value: "3 Years",         label: "Scripting" },
       { value: "Client + Server", label: "Roblox Development" }
     ],
 
     toolkit: ["Luau", "Roblox Studio", "Rojo", "VS Code", "Git", "GitHub"],
 
     contactText: "Tell me what you need, what you have so far, and your deadline. I'll take a look and tell you the price.",
-    footer: "Roblox Scripter – Built With Care."
+    footer: "Roblox Scripter. Built with care."
   };
 </script>
 <!-- ═════════════════════ end of editable block ═════════════════════ -->
 
-<title>! Crazy. — Roblox Scripter</title>
-<meta name="description" content="Freelance Roblox scripter. Combat, movement, UI and custom game systems — from the first idea to the final details.">
+<title>! Crazy. | Roblox Scripter</title>
+<meta name="description" content="Freelance Roblox scripter. Combat, movement, UI and custom game systems. From the first idea to the final details.">
 <meta name="theme-color" content="#0b0b0c">
 <link rel="icon" href="assets/avatar.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -240,6 +235,8 @@
   .project-body h3 { font-size: clamp(22px, 2.4vw, 28px); letter-spacing: -.03em; line-height: 1.1; margin: 0 0 8px; font-weight: 700; }
   .project-body p { color: var(--muted); margin: 0 0 22px; font-size: 15.5px; }
   .project-body .btn { margin-top: auto; align-self: flex-start; padding: 11px 18px; font-size: 14.5px; }
+  .project-body .btn.soon { color: var(--muted); border-style: dashed; cursor: default; }
+  .project-body .btn.soon:hover { transform: none; border-color: var(--line-2); }
   .project-body .btn .play { width: 18px; height: 18px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; }
   .project-body .btn .play svg { width: 8px; height: 8px; transform: none !important; }
 
@@ -427,7 +424,7 @@
   <!-- Hero -->
   <section class="hero" id="top" aria-labelledby="hero-title">
     <div class="wrap">
-      <div class="eyebrow reveal"><span class="pulse" aria-hidden="true"></span><span data-bind="role"></span> · Open for commissions</div>
+      <div class="eyebrow reveal"><span class="pulse" aria-hidden="true"></span><span><span data-bind="role"></span>, open for work</span></div>
       <h1 id="hero-title" class="reveal" style="--d:.08s"></h1>
       <p class="sub reveal" style="--d:.16s" data-bind="subline"></p>
       <div class="actions reveal" style="--d:.24s">
@@ -471,7 +468,7 @@
           <div class="sec-num reveal"><b>01</b> Selected Work</div>
           <h2 id="work-title" class="reveal" style="--d:.08s">Made <em>to play.</em></h2>
         </div>
-        <p class="reveal" style="--d:.16s">A few systems I've built — each one designed, scripted and polished end to end.</p>
+        <p class="reveal" style="--d:.16s">Some systems I made. I scripted and polished each one myself.</p>
       </div>
       <div class="work-grid" id="projects"></div>
     </div>
@@ -485,7 +482,7 @@
           <div class="sec-num reveal">Services</div>
           <h2 id="svc-title" class="reveal" style="--d:.08s">What I <em>build.</em></h2>
         </div>
-        <p class="reveal" style="--d:.16s">From a single mechanic to the systems that hold a whole game together.</p>
+        <p class="reveal" style="--d:.16s">From one small mechanic to the systems that run a whole game.</p>
       </div>
       <div class="svc-grid" id="services-list"></div>
     </div>
@@ -515,7 +512,7 @@
           <div class="sec-num reveal">Toolkit</div>
           <h2 id="tool-title" class="reveal" style="--d:.08s">The <em>tools.</em></h2>
         </div>
-        <p class="reveal" style="--d:.16s">A modern, version-controlled workflow — so your project stays clean and easy to hand over.</p>
+        <p class="reveal" style="--d:.16s">The tools I use every day, so your project stays clean and easy to work on.</p>
       </div>
       <ol class="tool-list" id="tools"></ol>
     </div>
@@ -541,7 +538,7 @@
           <div class="dc-user"><span data-bind="discord"></span><span class="sep" aria-hidden="true"></span><span data-bind="discordStatusNote"></span></div>
           <div class="dc-box">
             <h4>About Me</h4>
-            <p><span data-bind="role"></span> · DMs open for commissions.</p>
+            <p><span data-bind="role"></span>. My DMs are open for work.</p>
           </div>
           <button type="button" class="dc-copy" id="copy-btn">
             <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="5" y="5" width="9" height="9" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M11 5V3.5A1.5 1.5 0 0 0 9.5 2h-6A1.5 1.5 0 0 0 2 3.5v6A1.5 1.5 0 0 0 3.5 11H5" stroke="currentColor" stroke-width="1.6"/></svg>
@@ -583,7 +580,7 @@
     if (v == null) return;
     if (el.tagName === "IMG") el.src = v; else el.textContent = v;
   });
-  document.title = `${C.name}. — ${C.role}`;
+  document.title = `${C.name}. | ${C.role}`;
   $("#portrait-img").alt = `Portrait of ${C.name}`;
   $("#dc-avatar").alt = `${C.name} avatar`;
   $("#dc-banner").style.backgroundImage = C.banner ? `url("${C.banner}")` : "";
@@ -610,9 +607,9 @@
       <div class="project-body">
         <h3>${esc(p.title)}</h3>
         <p>${esc(p.desc)}</p>
-        <a class="btn" href="${esc(p.link)}" target="_blank" rel="noopener">
+        ${p.link && p.link !== "#" ? `<a class="btn" href="${esc(p.link)}" target="_blank" rel="noopener">
           <span class="play" aria-hidden="true"><svg viewBox="0 0 8 8"><path d="M1.5 0.8v6.4L7 4z" fill="currentColor"/></svg></span>
-          Watch Project<span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">: ${esc(p.title)} (opens in new tab)</span></a>
+          Watch Project<span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">: ${esc(p.title)} (opens in new tab)</span></a>` : `<span class="btn soon" aria-disabled="true">Coming Soon</span>`}
       </div></article>`;
   }).join("");
 
